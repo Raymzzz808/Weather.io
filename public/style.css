@@ -1,0 +1,246 @@
+
+
+header{
+    position:absolute;
+    left:0;
+    width:100%;
+}
+footer {
+    display:absolute;
+    right:10px;
+    text-align:center;
+    padding-top:5px;
+}
+body {
+    padding:15px;
+    background-image:url('https://images.pexels.com/photos/531767/pexels-photo-531767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-attachment: fixed;
+}
+.bgw{
+    background-color:white !important;
+}
+.br{
+    border: red 2px solid;
+}
+.bb{
+    border: blue 2px solid;
+}
+.bk{
+    border: black 2px solid;
+}
+.main{
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin-top:15px;
+    padding-top:5px;
+
+
+
+   
+}
+.second{
+    image-resolution:1020px;
+    padding-bottom:25px;
+}
+.top{
+    padding-bottom:25px;
+    text-align:center;
+    margin-left:-20px;
+
+}
+.top h1{
+    text-transform: uppercase;
+    font-weight:bold;
+    color:midnightblue;
+    margin-bottom:0px;
+    font-family: "Karla", sans-serif;
+    padding-top:15px;
+    text-align:center;
+    font-size:4rem;
+}
+.main-box{
+    background-color:midnightblue;
+    padding:50px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-bottom:15px;
+
+}
+#sub{
+    font-family:"Merriweather",serif;
+    text-align:center;
+    color:white;
+}
+
+#scw{
+    text-align:center;
+    font-weight:600;
+    font-family:"karla", sans-serif;
+    color:whitesmoke;
+    font-size:2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:25px;
+    
+
+}
+.top h2{
+    color: goldenrod;
+}
+#condition{
+    margin-bottom:25px;
+    color:midnightblue;
+    font-size:1rem;
+    font-family:"Merriweather",serif;
+
+}
+#temp-icon{
+    margin-top:-2;
+    margin-bottom:0;
+    width:100px;
+}
+.icons{
+    width:50px;
+    padding:5px;
+}
+.list{
+    padding-left:0;
+    margin-left:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:25px;
+}
+.list li{
+    list-style: none;
+    padding-left:0;
+    margin-left:0;
+}
+.list div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.listed{
+    padding:15px;
+}
+
+.listdiv{
+    margin-top:0px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}  
+#icon{
+    margin-bottom:0px !important;
+    padding-bottom:0px !important;
+}
+#temp{
+    color:white;
+    font-size:6rem;
+    font-weight:bold;
+    margin-bottom:0px; 
+    margin-top:0; 
+    background: linear-gradient(-45deg, #000000, midnightblue);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    font-family: "Karla", sans-serif;
+
+}
+#location{
+    margin-top:0px;
+    color:gold;
+    font-style:italic;
+    font-weight:bold;
+    font-size:1.45rem;
+    font-family:"Merriweather",serif;
+
+
+}
+
+.hl:hover, 
+.uvi:hover, 
+.rl:hover, 
+.ws:hover, 
+.wg:hover,
+.wd:hover,
+.fl:hover{
+    cursor: pointer;
+    background-color:midnightblue;
+    font-weight:bolder;
+    font-size: 1.6rem;
+    border-image-source: linear-gradient(to right, #ffe53e, #d03000);
+    background: -webkit-linear-gradient(#ffe53e, #d03000);
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+
+}
+.measurement{
+    color:midnightblue;
+    border: midnightblue 2px solid;
+    background-color:white;
+    text-align:center;
+    padding:25px;
+    width:100%;
+    font-weight:600;
+    font-size:1.2rem;
+    text-transform: uppercase;
+    
+    
+}
+
+.reading{
+    font-family: "Karla", sans-serif;
+    color:midnightblue;
+    font-weight:bold;
+    width:100%;
+    font-size:2.5rem;
+    padding:5px;
+    border-image-source: linear-gradient(to right, #ffe53e, #d03000);
+    background: -webkit-linear-gradient(#ffe53e, #d03000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.rules{
+    font-family: "Karla", sans-serif;
+    padding-top:15px;
+    font-weight:bold;
+    color:white;
+}
+.rules:hover{
+    font-size:1.4rem;
+}
+
+.bg {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+  }
+  .bgr {
+    border-image-source: linear-gradient(to right, #ffe53e, #d03000);
+  }
+  .bgl {
+    border-image-source: linear-gradient(to left, #ffe53e, #f27100);
+  }
+  #get{
+    
+    background-color:white;
+    color:midnightblue;
+    border-style:none;
+    font-weight:bold;
+    font-size:1.1rem;
+    font-family:"Merriweather",serif;
+
+  }
+  #myForm{
+    padding-bottom:15px;
+  }

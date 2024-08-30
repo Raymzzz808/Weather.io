@@ -1,0 +1,140 @@
+<%- include("../views/header.ejs") %>
+<body>
+<div class ="main">
+    <center><img id="icon" src ="<%= icon %>" height="120px"/></center>
+<div class="top">
+    <h1><%= locals.title %> </h1>
+    <small id="sub"> <i><%= locals.subTitle %></i></small>
+</div>
+</div>
+
+<div class ="second" >
+    <ul class ="list">
+        <form id="myForm" method="POST">
+            <div id='formHead'>
+                <label for="city" id="search"></label>
+            </div>
+            <input id="city" name="city" placeholder="Enter City,State,Zipcode Here"></input>
+            <input class="get" id="get" type="submit" value="SEARCH" formaction="/">
+        </form>
+
+        <li id="temp" class="temp"> 
+            <%= temp %>
+            <img id="temp-icon" src= "/images/temp.png"/>
+        </li>
+        <h2 id="location"><%= city %><%= state %></h2>
+        <h3 id="condition"> <%=condition %> </h3>
+        
+    <div class="listdiv pt-2">
+
+        <li class="measurement p-2 hl bg bgr"> 
+            <img class="icons" src= "/images/humidity.png"/>
+            Humidity Levels:
+            <li class="reading hlr"> 
+                <%= humidity %> 
+            </li>
+        </li>
+        
+        <li class="measurement uvi p-2 bg bgl"> 
+            <img class="icons" src= "/images/uv-index.png"/>
+            UV Index:
+            <li class="reading uvir"> 
+                <%= uv_index %>
+            </li>
+        </li>
+        
+        <li class="measurement p-2 rl bg bgl"> 
+            <img class="icons" src= "/images/rain.png"/>
+            Rain:
+            <li class="reading rlr"> 
+                <%= rain %> in.
+            </li>
+        </li>
+        <li class= "measurement ws p-2 bg bgr"> 
+            <img class="icons" src= "/images/wind.png"/>
+            Wind Speed:
+            <li class="reading wsr"> 
+                <%= windSpeed %>
+            </li>
+        </li>
+        
+        <li class="measurement p-2 wg bg bgl"> 
+            <img class="icons" src= "/images/gust.png"/>
+            Gust Speed:
+            <li class="reading wgr">
+                <%= windGust %>
+
+            </li>
+        </li>
+        
+        <li class="measurement p-2 wd bg bgr"> 
+            <img class="icons" src= "/images/wind-direction.png"/>
+            Wind Direction: 
+            <li class="reading wdr">
+                <%= windDirection %>
+
+            </li>
+        </li>
+
+        <li class="measurement p-2 fl bg bgl"> 
+            <img class="icons" src= "/images/feels-like.png"/>
+            Feels Like: 
+            <li class="reading flr">
+                <%= feels %>
+
+            </li>
+        </li>
+    </div>
+    <p class="rules">Show All</p>
+    </ul>
+</div>
+<!--SCRIPTS-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(".temp").fadeIn();
+    $(".reading").hide();
+    $(document).ready(function(e) {
+    $(".hl").on("click", function() { $(".hlr").slideToggle(); });
+    $(".uvi").on("click", function() { $(".uvir").slideToggle(); });
+    $(".rl").on("click", function() { $(".rlr").slideToggle(); });
+    $(".gr").on("click", function() { $(".rr").slideToggle(); });
+    $(".ws").on("click", function() { $(".wsr").slideToggle(); });
+    $(".wg").on("click", function() { $(".wgr").slideToggle(); });
+    $(".wd").on("click", function() { $(".wdr").slideToggle(); });
+    $(".fl").on("click", function() { $(".flr").slideToggle(); });
+
+    $(".rules").on("click", function() {
+        $(".reading").slideToggle();
+        if ($(".hlr").is(":visible")) {
+            $(".hlr").show();
+        }
+        if ($(".uvir").is(":visible")) {
+            $(".uvir").show();
+        }
+        if ($(".rlr").is(":visible")) {
+            $(".rlr").show();
+        }
+        if ($(".rr").is(":visible")) {
+            $(".rr").show();
+        }
+        if ($(".wsr").is(":visible")) {
+            $(".wsr").show();
+        }
+        if ($(".wgr").is(":visible")) {
+            $(".wgr").show();
+        }
+        if ($(".wdr").is(":visible")) {
+            $(".wdr").show();
+        }
+        if ($(".flr").is(":visible")) {
+            $(".flr").show();
+        }
+    });
+    $(".rules").click(function(){
+    $(this).text( ($(this).text() == 'Show All' ? 'Hide All' : 'Show All') )
+});
+});
+</script>
+<footer>
+    <%- include("../views/footer.ejs")%></footer>   
+</body>

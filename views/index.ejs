@@ -1,0 +1,67 @@
+<%- include("../views/header.ejs") %>
+<body>
+<div class ="main">
+<div class="top">
+    <h1><%= locals.title %> </h1>
+    <small id="sub"> <i><%= locals.subTitle %></i></small>
+</div>
+
+</div>
+
+<div style="margin-top:50px;">
+    
+    <div class="main-box">
+        <img id="temp-icon" src="/images/temp.png" class="padding-bottom:15px;"/>
+
+    <div class="scw"> 
+        <h2 id="scw">Check Today's Weather:</h2>
+    </div>
+    <ul class ="list">
+        <form id="myForm" method="POST">
+            <div id='formHead'>
+            <label for="city" id="search"></label></div>
+            <input id="city" name="city" placeholder="Enter City,State,Zipcode Here"></input>
+            <input class="get" id="get" type="submit" value="SEARCH" formaction="/">
+        </form>
+    </div>
+
+<footer style="margin-top: 200px;">
+    <%- include("../views/footer.ejs")%></footer>
+    
+</body>
+
+<!-- function arrayProducts(n, arr) {
+    let result = [];
+
+    for (let i = 0; i < n; i++) {
+        result[i] = 1;
+        for (let j = 0; j < n; j++) {
+            if (i !== j) {
+                result[i] *= arr[j];
+            }
+        }
+    }
+
+    return result;
+}
+
+// Read input values from stdin
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('', (n) => {
+    rl.question('', (arrInput) => {
+        const arr = arrInput.split(' ').map(Number);
+
+        // Call arrayProducts and display the result
+        const result = arrayProducts(n, arr);
+
+        // Print the result array
+        console.log(result.join(' '));
+
+        rl.close();
+    });
+}); -->
